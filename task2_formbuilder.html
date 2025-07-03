@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Builder</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f0fff0;
+      padding: 20px;
+    }
+    .question {
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Create Survey Questions</h2>
+  <div id="questionContainer"></div>
+  <button onclick="addQuestion()">Add Question</button>
+  <button onclick="window.location.href='task3_questiontypes.html'">Next</button>
+
+  <script>
+    function addQuestion() {
+      const container = document.getElementById("questionContainer");
+      const input = document.createElement("input");
+      input.className = "question";
+      input.placeholder = "Enter your question here";
+      container.appendChild(input);
+      container.appendChild(document.createElement("br"));
+    }
+  </script>
+</body>
+</html>
